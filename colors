@@ -1,0 +1,28 @@
+colors
+
+
+dark dark 000000
+7F7F7F
+red CD0000
+FF0000
+green 00CD00
+00FF00
+yellow CDCD00
+FFFF00
+blue 0000EE
+5C5CFF
+purple CD00CD
+FF00FF
+cyan 00CDCD
+00FFFF
+white E5E5E5
+FFFFFF
+
+
+
+bground 282828
+
+
+cursor
+  text background
+default D3D7CF
