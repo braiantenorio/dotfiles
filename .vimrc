@@ -175,3 +175,5 @@ if $VIMENV == 'prev'
   noremap <C-D> :call delete(expand('%')) <bar> argdelete % <bar> bdelete<CR>
   set noswapfile
 endif
+
+set term=screen-256color
