@@ -25,19 +25,13 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-#linkDotfile .vim
 linkDotfile .vimrc
-#linkDotfile .ackrc
 linkDotfile .bashrc
 linkDotfile .gitconfig
 linkDotfile .tmux.conf
-#linkDotfile .goomwwmrc
-#linkDotfile .inputrc
-#linkDotfile .xinitrc
 linkDotfile .curlrc
-#linkDotfile .gf
 
-mkdir -p $dotfilesDir/.vim/bundle
-cd $dotfilesDir/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git
+#mkdir -p $dotfilesDir/.vim/bundle
+#cd $dotfilesDir/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
