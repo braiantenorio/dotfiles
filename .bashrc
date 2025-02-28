@@ -1,7 +1,6 @@
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoredups:ignorespace
-#hola
 # append to the history file, don't overwrite it
 shopt -s histappend
 
@@ -40,12 +39,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -58,11 +57,11 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 
 # enable color support of ls and also add handy aliases
@@ -110,11 +109,11 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
 export TERM=xterm-256color
@@ -158,9 +157,9 @@ bakwht='\[\e[47m\]'   # White
 txtrst='\[\e[0m\]'    # Text Reset
 
 # Prompt colours
-atC="${txtpur}"
-nameC="${txtpur}"
-hostC="${txtpur}"
+atC="${txtred}"
+nameC="${txtylw}"
+hostC="${txtcyn}"
 pathC="${txtgrn}"
 gitC="${txtpur}"
 pointerC="${txtgrn}"
@@ -168,18 +167,22 @@ normalC="${txtwht}"
 
 # Red name for root
 if [ "${UID}" -eq "0" ]; then
-  nameC="${txtred}"
+    nameC="${txtred}"
 fi
 
 # Patent Pending Prompt
 export PS1="${nameC}\u${atC}@${hostC}\h:${pathC}\w${gitC}\$(gitPrompt)${pointerC}▶${normalC} "
 
 function gitPrompt {
-  command -v __git_ps1 > /dev/null && __git_ps1 " (%s)"
+    command -v __git_ps1 > /dev/null && __git_ps1 " (%s)"
 }
 
 # Local settings go last
-if [ -f ~/.localrc ]; then 
-  source ~/.localrc
+if [ -f ~/.localrc ]; then
+    source ~/.localrc
 fi
 
+. "$HOME/.asdf/asdf.sh"
+
+. "$HOME/.asdf/completions/asdf.bash"
+. "$HOME/.cargo/env"

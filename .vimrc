@@ -45,7 +45,7 @@ set showmode
 set showcmd
 set modeline
 set ruler
-"set title
+set title
 set nu
 
 " Line wrapping
