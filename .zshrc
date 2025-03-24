@@ -15,6 +15,10 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
+export PATH=${PATH}:~/bin:~/.local/bin:~/etc/scripts
+export PATH=${PATH}:/usr/local/go/bin
+export GOPATH=~
+
 # configure key keybindings
 bindkey -e                                        # emacs key bindings
 bindkey ' ' magic-space                           # do history expansion on space
@@ -183,6 +187,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias diff='diff --color=auto'
     alias ip='ip --color=auto'
 
+    alias cat='batcat'
+
     export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
     export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
     export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
@@ -217,3 +223,12 @@ fi
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 . "$HOME/.cargo/env"
+
+# Created by `pipx` on 2025-03-01 01:55:18
+export PATH="$PATH:/home/braian/.local/bin"
+
+##Local settings go last
+if [ -f ~/.localrc ]; then
+   source ~/.localrc
+   fi
+

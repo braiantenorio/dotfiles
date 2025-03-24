@@ -30,6 +30,7 @@ linkDotfile .bashrc
 linkDotfile .gitconfig
 linkDotfile .tmux.conf
 linkDotfile .curlrc
+linkDotfile .zshrc
 
 #mkdir -p $dotfilesDir/.vim/bundle
 #cd $dotfilesDir/.vim/bundle
