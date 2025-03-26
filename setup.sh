@@ -2,10 +2,17 @@
 dotfilesDir=$(pwd)
 
 function linkDotfile {
-  dest="${HOME}/${1}"
+  if [ $# -eq 1 ]; then
+    echo "Recibido 1 argumento"
+    dest="${HOME}/${1}"
+  elif [ $# -eq 2 ]; then
+	echo "Recibo 2 argumentos"
+    dest="${HOME}/${2}/${1}"    
+  fi
+
   dateStr=$(date +%Y-%m-%d-%H%M)
 
-  if [ -h ~/${1} ]; then
+  if [ -h "${dest}" ]; then
     # Existing symlink 
     echo "Removing existing symlink: ${dest}"
     rm ${dest} 
@@ -31,8 +38,7 @@ linkDotfile .gitconfig
 linkDotfile .tmux.conf
 linkDotfile .curlrc
 linkDotfile .zshrc
+linkDotfile kitty.conf .config/kitty
 
-#mkdir -p $dotfilesDir/.vim/bundle
-#cd $dotfilesDir/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
