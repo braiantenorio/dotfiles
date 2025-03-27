@@ -1,5 +1,3 @@
-# ~/.zshrc file for zsh interactive shells.
-# see /usr/share/doc/zsh/examples/zshrc for examples
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 setopt autocd              # change directory just by typing its name
@@ -178,8 +176,6 @@ if [ -x /usr/bin/dircolors ]; then
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -227,7 +223,7 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # Created by `pipx` on 2025-03-01 01:55:18
 export PATH="$PATH:/home/braian/.local/bin"
 
-##Local settings go last
+#Local settings go last
 if [ -f ~/.localrc ]; then
    source ~/.localrc
    fi
