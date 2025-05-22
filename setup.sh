@@ -38,6 +38,7 @@ linkDotfile .gitconfig
 linkDotfile .tmux.conf
 linkDotfile .curlrc
 linkDotfile .zshrc
+linkDotfile .wezterm.lua
 linkDotfile kitty.conf .config/kitty
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
