@@ -11,9 +11,9 @@ config.initial_cols = 120
 config.initial_rows = 28
 
 -- or, changing the font size and color scheme.
-config.font_size = 13.5
+config.font_size = 13
 
--- line_height = 1.2
+--line_height = 1.2
 
 config.font = wezterm.font('GeistMono Nerd Font', {weight = 'Medium'})
 

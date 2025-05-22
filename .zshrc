@@ -95,7 +95,7 @@ gitPrompt() {
     # Verifica si estás dentro de un repositorio git
     if git rev-parse --is-inside-work-tree &>/dev/null; then
         # Muestra solo el nombre de la rama, sin texto adicional
-        echo "-(%{$txtpur%}$(git rev-parse --abbrev-ref HEAD)%b%F{%(#.blue.green)})"
+        echo "%F{%(#.blue.green}-(%f%{$txtpur%}%B$(git rev-parse --abbrev-ref HEAD)%b%F{%(#.blue.green)})"
     fi
 }
 
@@ -106,7 +106,7 @@ configure_prompt() {
     [ "$EUID" -eq 0 ] && prompt_symbol=💀
     case "$PROMPT_ALTERNATIVE" in
         twoline)
-            PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]\$(gitPrompt)\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
+            PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)─}${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{%(#.red.blue)}%n'$prompt_symbol$'%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]%f\$(gitPrompt)\n%F{%(#.blue.green)}└─%f%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
             # Right-side prompt with exit codes and background processes
             #RPROMPT=$'%(?.. %? %F{red}%B⨯%b%F{reset})%(1j. %j %F{yellow}%B⚙%b%F{reset}.)'
             ;;
