@@ -15,14 +15,16 @@ config.font_size = 13
 
 --line_height = 1.2
 
-config.font = wezterm.font('GeistMono Nerd Font', {weight = 'Medium'})
+config.font = wezterm.font('GeistMono Nerd Font Mono')
 
-config.color_scheme = 'iTerm2 Default'
+--config.color_scheme = 'iTerm2 Default'
 
---config.color_scheme = 'Dark Pastel (Gogh)'
+config.color_scheme = 'Dark Pastel (Gogh)'
 
 --config.color_scheme = 'iTerm2 Pastel Dark Background'
 config.hide_tab_bar_if_only_one_tab = true
+
+config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 
 -- Finally, return the configuration to wezterm:
 --
