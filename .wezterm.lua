@@ -13,13 +13,22 @@ config.initial_rows = 28
 -- or, changing the font size and color scheme.
 config.font_size = 13
 
---line_height = 1.2
+line_height = 1.2
+--config.font = wezterm.font('GeistMono Nerd Font Mono', {weight = 'Medium'})
+--config.font = wezterm.font('Geist Mono', {weight= 'Medium'})
+config.font = wezterm.font('JetBrains Mono', {weight= 'Medium'})
 
-config.font = wezterm.font('GeistMono Nerd Font Mono')
+--config.font = wezterm.font('Cascadia Mono', {weight= 'Medium'})
+
+
+
+--config.font = wezterm.font('CaskaydiaMono Nerd Font Mono', {weight= 'Medium'})
 
 --config.color_scheme = 'iTerm2 Default'
 
-config.color_scheme = 'Dark Pastel (Gogh)'
+--config.color_scheme = 'Dark Pastel (Gogh)'
+config.color_scheme = 'Campbell (Gogh)'
+
 
 --config.color_scheme = 'iTerm2 Pastel Dark Background'
 config.hide_tab_bar_if_only_one_tab = true
@@ -56,6 +65,9 @@ config.colors = {
     -- The color of the inactive tab bar edge/divider
     inactive_tab_edge = '#575757',
   },
+  selection_bg = '#FFFFFF',
+  selection_fg = '#000000'
+
 }
 
 return config

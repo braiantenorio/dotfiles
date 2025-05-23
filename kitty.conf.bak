@@ -1,5 +1,5 @@
 
-font_family Fira Mono for Powerline # CaskaydiaMono NFM #   CaskaydiaMonoNerdFont
+font_family      CaskaydiaMonoNerdFont
 
 url_style curly
 
@@ -30,6 +30,6 @@ map ctrl+shift+t new_tab_with_cwd
 font_size 13
 
 # BEGIN_KITTY_THEME
-# Jellybeans
-#include current-theme.conf
+# Flatland
+include current-theme.conf
 # END_KITTY_THEME

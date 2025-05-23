@@ -85,17 +85,18 @@ txtylw='%F{yellow}'
 txtcyn='%F{cyan}'
 txtgrn='%F{green}'
 txtpur='\e[0;35m' # Purple
+txtylw='\e[0;33m' # Yellow
 txtwht='%F{white}'
 normalC='%F{reset}'
 
-gitC="${txtpur}"
+gitC="${txtylw}"
 
 # Función para mostrar la rama de git en el prompt
 gitPrompt() {
     # Verifica si estás dentro de un repositorio git
     if git rev-parse --is-inside-work-tree &>/dev/null; then
         # Muestra solo el nombre de la rama, sin texto adicional
-        echo "%F{%(#.blue.green}-(%f%{$txtpur%}%B$(git rev-parse --abbrev-ref HEAD)%b%F{%(#.blue.green)})"
+        echo "%F{%(#.blue.green}-(%f%{$txtylw%}%B$(git rev-parse --abbrev-ref HEAD)%b%F{%(#.blue.green)})"
     fi
 }
 
