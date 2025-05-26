@@ -14,7 +14,6 @@ config.initial_rows = 28
 config.font_size = 13
 
 line_height = 1.2
---config.font = wezterm.font('GeistMono Nerd Font Mono', {weight = 'Medium'})
 --config.font = wezterm.font('Geist Mono', {weight= 'Medium'})
 config.font = wezterm.font('JetBrains Mono', {weight= 'Medium'})
 
