@@ -1,6 +1,11 @@
 font-size=13
 
 theme = iTerm2 Default
+theme = tokyonight
+theme = iceberg-dark
+theme = GitHub-Dark-Default
+theme = Monokai Pro
+theme = Dracula
 
 bold-is-bright
 
