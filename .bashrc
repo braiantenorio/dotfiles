@@ -75,7 +75,7 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias cat='batcat'
+#alias cat='batcat'
 alias grep='grep --color=auto'
 alias tnn="cd ~/src/github.com/tomnomnom"
 alias :q="exit"

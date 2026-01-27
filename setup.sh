@@ -30,15 +30,10 @@ function linkDotfile {
   ln -s ${dotfilesDir}/${1} ${dest}
 }
 
-linkDotfile .vimrc
 linkDotfile .bashrc
 linkDotfile .gitconfig
 linkDotfile .tmux.conf
 linkDotfile .curlrc
 linkDotfile .zshrc
-linkDotfile .wezterm.lua
-linkDotfile kitty.conf .config/kitty
 linkDotfile config .config/ghostty
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
