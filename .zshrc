@@ -15,7 +15,8 @@ PROMPT_EOL_MARK=""
 
 export PATH=${PATH}:~/bin:~/.local/bin:~/etc/scripts
 export PATH=${PATH}:/usr/local/go/bin
-export GOPATH=~
+# let default gopath being
+#export GOPATH=~
 
 # configure key keybindings
 bindkey -e                                        # emacs key bindings
