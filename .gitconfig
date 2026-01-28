@@ -22,7 +22,7 @@
     rm-untracked = !rm $(git ls-files --other --exclude-standard)
     lsblame = !cd "./$GIT_PREFIX" && ls -A | xargs -n1 -I'{}' git log --no-merges --format='%h (%an%x09%ai) {}' -1 '{}' | column -ts $'\t'
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/bin/nvim
     mergeoptions =
 [push]
     default = current

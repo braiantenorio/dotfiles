@@ -2,11 +2,7 @@
 dotfilesDir=$(pwd)
 
 function linkDotfile {
-  if [ $# -eq 1 ]; then
-    dest="${HOME}/${1}"
-  elif [ $# -eq 2 ]; then
-    dest="${HOME}/${2}/${1}"    
-  fi
+  dest="${HOME}/${1}"
 
   dateStr=$(date +%Y-%m-%d-%H%M)
 
@@ -33,7 +29,4 @@ function linkDotfile {
 linkDotfile .bashrc
 linkDotfile .gitconfig
 linkDotfile .tmux.conf
-linkDotfile .curlrc
 linkDotfile .zshrc
-linkDotfile config .config/ghostty
-
