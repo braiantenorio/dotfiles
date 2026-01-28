@@ -6,7 +6,7 @@ HISTFILESIZE=2000000
 
 export PATH=${PATH}:~/bin:~/.local/bin:~/etc/scripts
 export PATH=${PATH}:/usr/local/go/bin
-export GOPATH=~
+#export GOPATH=~
 
 shopt -s checkwinsize
 
