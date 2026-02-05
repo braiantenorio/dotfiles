@@ -220,9 +220,10 @@ fi
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
-. "$HOME/.cargo/env"
 
-# Created by `pipx` on 2025-03-01 01:55:18
+[[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+
+# Created by `pipx` 
 export PATH="$PATH:/home/braian/.local/bin"
 
 #Local settings go last
