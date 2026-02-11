@@ -13,7 +13,7 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 # hide EOL sign ('%')
 PROMPT_EOL_MARK=""
 
-export PATH=${PATH}:~/bin:~/.local/bin:~/etc/scripts
+export PATH=${PATH}:~/go/bin:~/.local/bin:~/etc/scripts
 export PATH=${PATH}:/usr/local/go/bin
 # let default gopath being
 #export GOPATH=~
